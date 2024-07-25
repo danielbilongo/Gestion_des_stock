@@ -19,6 +19,18 @@ VALUES
 ('Bonneau', 'Gilles', '+33 (0)4 90 10 86 05', 'martine33@example.org', '2023-04-06'),
 ('Loiseau', 'Charles', '+33 (0)4 92 86 07 28', 'xavierpineau@example.com', '2023-02-01');
 
+INSERT INTO Inscriptions (date_inscription, statut_paiement, id_etudiant_Etudiants, id_formation_Formations)
+VALUES
+('2023-05-12', 'false', 1, 1),
+('2023-12-03', 'false', 2, 2),
+('2024-10-06', 'false', 3, 2),
+('2024-08-08', 'true', 4, 3),
+('2024-05-09', 'false', 5, 4),
+('2023-08-19', 'false', 6, 5),
+('2024-03-10', 'false', 7, 6),
+('2024-07-15', 'false', 8, 5),
+('2024-08-09', 'false', 9, 3); 
+
 INSERT INTO Paiements (montant, date_paiement, methode_paiement, id_inscription_Inscriptions)
 VALUES
   (100.000, '2023-07-21', 'Carte bancaire', 1),
@@ -39,14 +51,4 @@ VALUES
   (30.000, '2024-06-17', 'Chèque', 5),
   (63.000, '2024-05-01', 'Carte bancaire', 7);
   
-INSERT INTO Inscriptions (date_inscription, statut_paiement, id_etudiant_Etudiants, id_formation_Formations)
-VALUES
-('2023-05-12', 'inachevé', 1, 1),
-('2023-12-03', 'inachevé', 2, 2),
-('2024-10-06', 'inachevé', 3, 2),
-('2024-08-08', 'achevé', 4, 3),
-('2024-05-09', 'inachevé', 5, 4),
-('2023-08-19', 'inachevé', 6, 5),
-('2024-03-10', 'inachevé', 7, 6),
-('2024-07-15', 'inachevé', 8, 5),
-('2024-08-09', 'inachevé', 9, 3); 
+
