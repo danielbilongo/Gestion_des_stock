@@ -11,6 +11,7 @@ CREATE TABLE Formations(
         date_debut     Date not null,
         date_fin     Date not null,
         tarif     Real unsigned not null,
+        nombre_places int (50),
         PRIMARY KEY (id_formation)
 )ENGINE=InnoDB;
 
