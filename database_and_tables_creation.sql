@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS Formations;
 CREATE TABLE Formations(
         id_formation     int (25) Auto_increment not null,
         nom_formation     Varchar (50) not null,
-        description     Text (2000) not null,
+        description     Text (2000),
         date_debut     Date not null,
         date_fin     Date not null,
         tarif     Real unsigned not null,
@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS Inscriptions;
 CREATE TABLE Inscriptions(
         id_inscription     int (25) auto_increment not null,
         date_inscription     Date not null,
-        statut_paiement     Bool not null,
+        statut_paiement     Bool default false not null,
         id_etudiant_Etudiants  int not null,
         id_formation_Formations int not null,
         PRIMARY KEY (id_inscription)
