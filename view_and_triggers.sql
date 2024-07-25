@@ -1,36 +1,36 @@
 #-----------------------------------------------------------------------------------------
 # 5. view and trigger to update payment status
 #-----------------------------------------------------------------------------------------
-SELECT "*********************VIEW AND TRIGGER*********************************\n";
 
 # 1. view to display registration details
 #------------------------------------------------------------------
+SELECT "*********************VIEW AND TRIGGER*********************************\n";
+
 SELECT "*******View to display registration details***********\n";
 
-drop view if exists inscriptionsDetails;
-create view inscriptionsDetails as
+drop view if exists inscriptionDetails;
+create view inscriptionDetails as
 select nom, nom_formation, date_inscription from Inscriptions inner join
 Etudiants on id_etudiant = id_etudiant_Etudiants inner join
 Formations on id_formation = id_formation_Formations;
 
 # calling the view
-select * from inscriptionsDetails order by date_inscription;
+select * from inscriptionDetails order by date_inscription;
 
 #-----------------------------------------------------------------
 # 2. trigger update paymentStatus when a payment is done
 #------------------------------------------------------------------
 SELECT "**********Trigger to update paymentStatus**************\n";
 
-# a. when a payment is done
 drop trigger if exists paymentStatus;
 delimiter //
 create trigger paymentStatus
-after insert on paiement
+after insert on Paiements
 for each row
 begin
 	declare total float;
     declare price real;
-    select id_inscription_Inscriptions, SUM(montant) into total 
+    select SUM(montant) into total 
     where id_inscription_Inscriptions = new.id_inscription_Inscriptions;
     select tarif into price from Formations;
     if total < price then
