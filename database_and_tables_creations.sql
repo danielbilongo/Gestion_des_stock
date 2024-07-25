@@ -34,7 +34,7 @@ DROP TABLE IF EXISTS Inscriptions;
 CREATE TABLE Inscriptions(
         id_inscription     int (25) auto_increment not null,
         date_inscription     Date not null,
-        statut_paiement     Bool not null,
+        statut_paiement     Bool not null default false,
         id_etudiant_Etudiants  int not null,
         id_formation_Formations int not null,
         PRIMARY KEY (id_inscription),
@@ -53,4 +53,10 @@ CREATE TABLE Paiements(
         PRIMARY KEY (id_paiement),
         FOREIGN KEY (id_inscription_Inscriptions) REFERENCES Inscriptions(id_inscription)
 )ENGINE=InnoDB;
+
+
+
+ALTER TABLE Paiements ADD CONSTRAINT FK_Paiements_id_inscription_Inscriptions FOREIGN KEY (id_inscription_Inscriptions) REFERENCES Inscriptions(id_inscription);
+ALTER TABLE Inscriptions ADD CONSTRAINT FK_Inscriptions_id_etudiant_Etudiants FOREIGN KEY (id_etudiant_Etudiants) REFERENCES Etudiants(id_etudiant);
+ALTER TABLE Inscriptions ADD CONSTRAINT FK_Inscriptions_id_formation_Formations FOREIGN KEY (id_formation_Formations) REFERENCES Formations(id_formation);
 
