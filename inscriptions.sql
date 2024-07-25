@@ -9,15 +9,15 @@ VALUES
 
 INSERT INTO Etudiants (nom, prenom, telephone, email, date_inscription, date_naissance)
 VALUES
-('Foucher', 'Gabriel', '+33 3 86 40 24 65', 'zriou@example.com', '2023-01-27', '1997-06-11'),
-('Ferrand', 'Olivier', '+33 (0)3 90 32 47 67', 'vincent69@example.org', '2024-05-22', '1997-02-17'),
-('Dias', 'Michèle', '+33 6 22 12 84 98', 'leroypatricia@example.org', '2023-07-06', '1994-04-18'),
-('Dupuis', 'Jean', '+33 5 82 53 65 62', 'didiercaroline@example.net', '2024-03-29', '1995-10-02'),
-('Laporte', 'Jean', '+33 (0)4 42 53 40 03', 'celina68@example.net', '2024-02-17', '1998-03-24'),
-('Coste', 'Marie', '02 34 83 04 66', 'nathalie56@example.org', '2023-03-01', '1997-05-10'),
-('Lucas', 'Louis', '+33 (0)1 64 68 65 38', 'smeyer@example.com', '2023-03-07', '1993-12-01'),
-('Bonneau', 'Gilles', '+33 (0)4 90 10 86 05', 'martine33@example.org', '2023-04-06', '1992-05-31'),
-('Loiseau', 'Charles', '+33 (0)4 92 86 07 28', 'xavierpineau@example.com', '2023-02-01', '1994-09-01');
+('Foucher', 'Gabriel', '+33 3 86 40 24 65', 'zriou@example.com', '2023-01-22', '1997-06-11'),
+('Ferrand', 'Olivier', '+33 (0)3 90 32 47 67', 'vincent69@example.org', '2024-04-12', '1997-02-17'),
+('Dias', 'Michèle', '+33 6 22 12 84 98', 'leroypatricia@example.org', '2023-06-05', '1994-04-18'),
+('Dupuis', 'Jean', '+33 5 82 53 65 62', 'didiercaroline@example.net', '2024-02-11', '1995-10-02'),
+('Laporte', 'Jean', '+33 (0)4 42 53 40 03', 'celina68@example.net', '2024-01-10', '1998-03-24'),
+('Coste', 'Marie', '02 34 83 04 66', 'nathalie56@example.org', '2023-02-09', '1997-05-10'),
+('Lucas', 'Louis', '+33 (0)1 64 68 65 38', 'smeyer@example.com', '2023-02-14', '1993-12-01'),
+('Bonneau', 'Gilles', '+33 (0)4 90 10 86 05', 'martine33@example.org', '2023-03-14', '1992-05-31'),
+('Loiseau', 'Charles', '+33 (0)4 92 86 07 28', 'xavierpineau@example.com', '2023-01-14', '1994-09-01');
 
 INSERT INTO Inscriptions (date_inscription, statut_paiement, id_etudiant_Etudiants, id_formation_Formations)
 VALUES
