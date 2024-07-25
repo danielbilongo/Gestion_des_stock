@@ -41,12 +41,12 @@ VALUES
   
 INSERT INTO Inscriptions (date_inscription, statut_paiement, id_etudiant_Etudiants, id_formation_Formations)
 VALUES
-('2023-05-12', 'inachevé', 1),
-('2023-12-03', 'inachevé', 2),
-('2024-10-06', 'inachevé', 3),
-('2024-08-08', 'achevé', 4),
-('2024-05-09', 'inachevé', 5),
-('2023-08-19', 'inachevé', 6),
-('2024-03-10', 'inachevé', 7),
-('2024-07-15', 'inachevé', 8),
-('2024-08-09', 'inachevé', 9); 
+('2023-05-12', 'inachevé', 1, 1),
+('2023-12-03', 'inachevé', 2, 2),
+('2024-10-06', 'inachevé', 3, 2),
+('2024-08-08', 'achevé', 4, 3),
+('2024-05-09', 'inachevé', 5, 4),
+('2023-08-19', 'inachevé', 6, 5),
+('2024-03-10', 'inachevé', 7, 6),
+('2024-07-15', 'inachevé', 8, 5),
+('2024-08-09', 'inachevé', 9, 3); 
