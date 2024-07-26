@@ -268,10 +268,13 @@ where e.nom = "Foucher";
 
 #Requête pour lister les inscriptions en cours dun étudiant
 select"--Requete pour lister les inscriptions en cours dun étudiant--";
-select i.id_inscription, i.date_inscription, i.statut_paiement
+select i.id_inscription, i.date_inscription, i.statut_paiement, f.nom_formation
 from Inscriptions as i
 Join Etudiants as e
 	On i.id_etudiant_Etudiants = e.id_etudiant
+Join Formations as f
+	On i.id_formation_Formations = f.id_formation
+
 where e.nom = "Foucher" and i.statut_paiement = 0 ;
 
 
