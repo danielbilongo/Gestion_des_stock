@@ -286,10 +286,3 @@ Join Inscriptions as i
 	On i.id_formation_Formations = f.id_formation
 Where f.nom_formation = "Infographie"
 GROUP BY f.id_formation;
-    
-
-
-
-ALTER TABLE Paiements ADD CONSTRAINT FK_Paiements_id_inscription_Inscriptions FOREIGN KEY (id_inscription_Inscriptions) REFERENCES Inscriptions(id_inscription);
-ALTER TABLE Inscriptions ADD CONSTRAINT FK_Inscriptions_id_etudiant_Etudiants FOREIGN KEY (id_etudiant_Etudiants) REFERENCES Etudiants(id_etudiant);
-ALTER TABLE Inscriptions ADD CONSTRAINT FK_Inscriptions_id_formation_Formations FOREIGN KEY (id_formation_Formations) REFERENCES Formations(id_formation);
