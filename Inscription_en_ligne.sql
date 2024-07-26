@@ -242,7 +242,7 @@ delimiter ;
 
 #Requete pour lister tous les étudiants inscrits à une certaine formation
 select"-- Requete pour lister tous les étudiants inscrits à une certaine formation--";
-select e.nom, e.prenom, e.id_etudiant
+select e.nom, e.prenom, e.id_etudiant, f.nom_formation
 from Etudiants as e
 join Inscriptions as i 
   on i.id_etudiant_Etudiants = e.id_etudiant
@@ -256,7 +256,7 @@ where f.nom_formation = "Infographie";
 #----------------------------------------------------------------------------------------
 #Requête pour trouver les paiements effectués par un certain étudiant
 select"-- Requete pour trouver les paiements effectués par un certain étudiant--";
-select p.id_paiement, p.montant, p.methode_paiement, p.date_paiement
+select p.id_paiement, p.montant, p.methode_paiement, p.date_paiement, e.nom, e.prenom
 from Paiements as p
 Join Inscriptions as i
 	on p.id_inscription_Inscriptions = i.id_inscription
@@ -268,7 +268,7 @@ where e.nom = "Foucher";
 
 #Requête pour lister les inscriptions en cours dun étudiant
 select"--Requete pour lister les inscriptions en cours dun étudiant--";
-select i.id_inscription, i.date_inscription, i.statut_paiement, f.nom_formation
+select i.id_inscription, i.date_inscription, i.statut_paiement, f.nom_formation,e.nom, e.prenom
 from Inscriptions as i
 Join Etudiants as e
 	On i.id_etudiant_Etudiants = e.id_etudiant
